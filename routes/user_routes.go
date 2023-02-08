@@ -9,4 +9,6 @@ func UserRoute(app *fiber.App) {
 	app.Post("/user", controllers.CreateUser)
 	app.Get("/users/:userId", controllers.GetAUser)
 	app.Get("/users", controllers.GetAllUsers)
+	app.Delete("/user/:userId", controllers.DeleteAUser)
+	app.Put("/user/:userId", controllers.EditAUser)
 }
